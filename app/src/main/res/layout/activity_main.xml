@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    tools:context="com.example.loan.customer.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Vui lòng nhập các thông tin "/>
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập họ và tên"
+            android:text=""
+            android:textSize="20dp" />
+        <requestFocus></requestFocus>
+
+        <RadioGroup
+            android:id="@+id/radioParent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radioNoteBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:text="Vở" />
+
+            <RadioButton
+                android:id="@+id/radioBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sách"
+                android:textSize="16dp" />
+            <RadioButton
+                android:id="@+id/radioPen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bút"/>
+        </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/editTextNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Số lượng cần mua"
+        android:inputType="number"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Lưu"
+            android:layout_gravity="center"
+            android:background="@drawable/button_color"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/buttonCancal"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Hủy"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_color"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <TextView
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Thông tin khách hàng:"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView">
+    </ListView>
+</LinearLayout>
